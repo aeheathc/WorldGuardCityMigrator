@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WorldGuard City Migrator Command List</title>
+<style type="text/css">
+span{
+	color:blue;
+}
+dt{
+	margin-top:1em;
+}
+ul{
+	padding-left:1em;
+}
+tt{
+	background-color:#EEE;
+}
+</style>
+</head>
+
+<body>
+<b>Commands:</b> [required] &lt;optional&gt;<br/>
+<dl>
+<dt><b>/wgmigrate</b></dt>
+<dd>Displays a list of player commands</dd>
+
+<dt>/wgmigrate<b> info &lt;region&gt;</b></dt>
+<dd>List everything WGCM knows about the given region (or if none, your current WGCM-selected region) in the context of it being a city you might want to move. This includes the number of regions that would be moved with it, and its approximate size.</dd>
+
+<dt>/wgmigrate<b> region [region]</b></dt>
+<dd>Selects a region in the current world for migration.</dd>
+
+<dt>/wgmigrate<b> from &lt;x y z&gt;</b></dt>
+<dd>Set the &quot;from&quot; reference point used for calculating the delta. If no coords given, this uses your current location.</dd>
+
+<dt>/wgmigrate<b> to &lt;x y z&gt;</b></dt>
+<dd>Set the destination reference point used for calculating the delta. If no coords given, this uses your current location. Make sure you use the same physical reference point in your city that is being moved for setting both the &quot;from&quot; and &quot;to&quot; points so that the regions and blocks line up exactly.</dd>
+
+<dt>/wgmigrate<b> delta [x y z]</b></dt>
+<dd>You can use this command to directly input how much to move the city instead of using the &quot;from&quot; and &quot;to&quot; commands. For example, using &quot;/wgmigrate delta 0 0 0&quot;<span></span> would result in no movement.</dd>
+
+<dt>/wgmigrate<b> rotation [degrees]</b></dt>
+<dd>Set the clockwise rotation to be applied when migrating. Use increments of 90 degrees. Negative values will work. Will rotate around the reference point specified in "from". If you specify only a delta and no From, the city will be rotated around a calculated center point (not recommended).</dd>
+
+<dt>/wgmigrate<b> status</b></dt>
+<dd>Show everything you have input for the current migration, indicating if it is enough to do the migration yet. Also provides some hints about the proposed migration such as any regions containing your target region in both the source and destination positions, as well as everything in the info command.</dd>
+
+<dt>/wgmigrate<b> process</b></dt>
+<dd>Do the migration.</dd>
+
+<dt>/wgmigrate<b> undo</b></dt>
+<dd>Undo your last migration. Only the last migration you did is remembered for undoing so do be careful. And you can't undo the undo.</dd>
+
+<dt>/wgmigrate<b> cancel</b></dt>
+<dd>Clear your current selections in case you input some info and decided not to do it. That way you don't accidentally move things if you type &quot;/wgmigrate process&quot; later without thinking.</dd>
+
+<dt>/wgmigrate<b> reload</b></dt>
+<dd>Reload the plugin.<br />
+<span>Requires a separete reload permission</span>
+
+<dt>/wgmigrate<b> version</b></dt>
+<dd>Show curent version.<br />
+</dd>
+</dl>
+</body></html>

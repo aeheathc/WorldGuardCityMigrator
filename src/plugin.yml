@@ -1,0 +1,19 @@
+name: WorldGuard City Migrator
+main: com.aehdev.worldguardcitymigrator.WorldGuardCityMigrator
+version: 1.0.0
+author: Zolcos
+description: >
+             Admin tool for moving all the WorldGuard regions inside a given "city" region together by a single delta. Only affects regions, not the world. 
+depend: [WorldGuard]
+commands:
+  wgmigrate:
+    description: Command for using WorldGuard City Migrator 
+    usage: |
+           /<command> - displays command help
+permissions:
+    worldguardcitymigrator.use:
+        default: op
+        description: Allows use of the commands to migrate cities.
+    worldguardcitymigrator.reload:
+        default: op
+        description: Allows reloading the plugin.
