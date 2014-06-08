@@ -1,4 +1,4 @@
-name: WorldGuard City Migrator
+name: WorldGuardCityMigrator
 main: com.aehdev.worldguardcitymigrator.WorldGuardCityMigrator
 version: 1.0.0
 author: Zolcos
